@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="add">Sum</string>
+    <string name="subs">Subs</string>
+    <string name="mul">MUL</string>
+    <string name="num1">Numero 1</string>
+    <string name="num2">Numero 2</string>
+</resources>
