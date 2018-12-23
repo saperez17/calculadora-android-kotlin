@@ -42,13 +42,14 @@ fun operar(n1: Int, n2: Int): Int {
     return n1 + n2
 }
 
-//El segundo parametro se vuelve un parametro por defecto, pues ya tiene un parametro por defecto
+//El segundo parametro se vuelve un parametro por defecto, es decir es opcional, pues se le ha asignado un valor
+//desde la definicion de la funcion.
 fun sumar2(n1: Int, n2: Int = 0): Int = n1 + n2
 
 var ans1 = sumar2(3)
 var ans2 = sumar2(n1 = 2, n2 = 4)
 
-//Extensiones en Kotlin. Cual es la diferencia con la herenia?
+//Extensiones en Kotlin. Cual es la diferencia con la herencia?
 fun Int.mul(n:Int):Int = this*n
 
 var ans3 = 4.mul(6)
@@ -59,7 +60,7 @@ var ans4 = 4 div 2
 var sub: (n1:Int, n2:Int)->Int={n1, n2 ->n1- n2}
 var ans6 = sub(7,6)
 
-//Palabar reservada para no retrno. Unit
+//Palabra reservada para no retorno. Unit
 fun operar (n1:Int, n2:Int, callback:(rta:Int) -> Unit){
     callback(n1 + n2)
 }
@@ -70,15 +71,13 @@ fun testOperar(){
     operar(1,2){rta -> println("resultado")}
     operar(2,4){println("Resultado $it")}
     //Lo que este en esta porcion de codigo que se ejecutara en background
-    Thr{
 
-    }
 }
 
 //class Thr(val callback:() -> Unit): Runnable{
 
 //Clases
-//Utilizo val keyword cpara convertir la vvariable en una propiedad de clase
+//Utilizo val or var keyword para convertir la variable en una propiedad de clase
 class Usuario(val nombre:String, var email:String)
 
 val user1 = Usuario("Alejandro", "alejo@gmail.com")
@@ -95,6 +94,12 @@ open class Mascota(val edad:Int, val raza:String){
         edadHumana = 7 * edad
     }
 }
+
+var pet = Mascota(1, "bloodhod")
+
+
+
+
 
 class Conejo(val nombre:String, edad:Int):Mascota(edad, "conejo"){
     constructor():this("", 0)
