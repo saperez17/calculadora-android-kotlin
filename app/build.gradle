@@ -1,6 +1,6 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.application' //Plugin para que se genere y compile el apk de la app android
 
-apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'      //Soporte de kotlin para android
 
 apply plugin: 'kotlin-android-extensions'
 
@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.cluster.android.kotlinex"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -25,9 +25,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Soporte basico a varios elementos visuales
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    //View para el diseño de interfaces garficas drag and drop
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
+    //Pruebas automaticas. Se especifican reglas y se ejecutan
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1-beta01'
+    //Para hacer pruebas de interfaz grafica de usuario.
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-beta01'
 }

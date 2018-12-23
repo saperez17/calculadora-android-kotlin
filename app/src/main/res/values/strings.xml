@@ -3,6 +3,7 @@
     <string name="add">Sum</string>
     <string name="subs">Subs</string>
     <string name="mul">Mul</string>
+    <string name="div">Div</string>
     <string name="num1">Number 1</string>
     <string name="num2">Number 2</string>
 </resources>
